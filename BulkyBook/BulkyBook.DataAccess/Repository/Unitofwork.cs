@@ -18,7 +18,9 @@ namespace BulkyBook.DataAccess.Repository
             category = new CategoryRepository(_db);
             CoverType = new CoverTypeRepository(_db);
             Product = new ProductRepository(_db);
-			Company= new CompanyRepository(_db);
+            Company = new CompanyRepository(_db);
+            ShopingCart = new ShopingCartRepository(_db);
+            ApplicationUser= new ApplicationUserRepository(_db);
 
 		}
         public ICategoryRepository category { get; private set; }
@@ -28,7 +30,11 @@ namespace BulkyBook.DataAccess.Repository
 
 		public ICompanyRepository Company {get; private set;}
 
-		public void save()
+        public IApplicationUserRepository ApplicationUser { get; private set; }
+
+        public IShopingCartRepository ShopingCart { get; private set; }
+
+        public void save()
         {
            _db.SaveChanges();
         }
