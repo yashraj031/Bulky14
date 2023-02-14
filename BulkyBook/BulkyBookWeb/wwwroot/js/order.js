@@ -25,14 +25,14 @@ $(document).ready(function () {
             }
         }
     }
-    loadDataTable();
+   
 });
 
 function loadDataTable(status)
 {
     dataTable = $('#tblData').DataTable({
         "ajax": {
-            debugger;
+           
             "url": "/Admin/Order/GetAll?status=" + status
         },
         "columns": [
@@ -56,7 +56,7 @@ function loadDataTable(status)
                 "width": "5%"
             }
         ]
-    });
+    });    
 }
 
 
